@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article | All</title>
+</head>
+<body>
+  <h1>Articles Ridhan</h1>
+  <a href="/articles/create">Buat data baru</a>
+  <% articles.forEach(x => {%>
+    <div>
+      <h1><%= x.title %> </h1>
+      <p><%= x.body %> </p>
+      <a href="/articles/<%=x.id%>">Baca lebih lanjut</a>
+      <a href="/articles/update/<%=x.id%>">Ubah article</a>
+      <form method="POST" action="/articles/<%=x.id%>?_method=DELETE">
+        <button type="submit">Hapus article</button>
+      </form>
+    </div>
+  <% }) %>
+</body>
+</html>

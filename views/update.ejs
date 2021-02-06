@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles | Update</title>
+</head>
+<body>
+  <form method="POST" action="/articles/<%=article.id%>?_method=PUT">
+    <label for="title">Title</label>
+    <br>
+    <input type="text" name="title" value="<%=article.title%>"/>
+    <br>
+
+    <label for="body">Body</label>
+    <br>
+    <input type="text" name="body" value="<%=article.body%>"/>
+    <br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
