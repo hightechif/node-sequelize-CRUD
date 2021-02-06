@@ -1,5 +1,5 @@
 ## Node Sequelize CRUD App
-This repository is a simple CRUD application using Node.js, Sequelize and PostgreSQL Technologies. This repository created to be my software engineering portofolio.
+This repository is a simple CRUD application using ORM implementation with Node.js, Sequelize and PostgreSQL Technologies. This repository created to be my software engineering portofolio.
 
 Feel free to clone and code it by your self to learn more about Node.js and Sequelize.
 
@@ -8,7 +8,7 @@ Make sure you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.co
 
 How to start:
 ```sh
-git clone https://github.com/ridhanf/bug-tracker.git
+git clone https://github.com/ridhanf/node-sequelize-CRUD.git
 npm install
 npm start / npm run dev
 ```
