@@ -7,7 +7,7 @@ const {Article} = require('./models');
 // const { Client } = require('pg');
 
 // const client = new Client({
-//   connectionString: process.env.DATABASE_URL,
+//   connectionString: process.env.DATABASE_URL || "postgres://hapguufwpqrzzv:f025cb2d683bad8c0cc0a272f36efcd8609b3b1daf852a338bb400fb775a66ab@ec2-54-144-251-233.compute-1.amazonaws.com:5432/d605qfmrvmfmpj",
 //   ssl: {
 //     rejectUnauthorized: false
 //   }
@@ -34,18 +34,18 @@ app.get('/', (req, res) => {
   res.status(300).redirect('/articles');
 })
 
-.get('/db', async (req, res) => {
-  try {
-    const client = await pool.connect();
-    const result = await client.query('SELECT * FROM test_table');
-    const results = { 'results': (result) ? result.rows : null};
-    res.render('pages/db', results );
-    client.release();
-  } catch (err) {
-    console.error(err);
-    res.send("Error " + err);
-  }
-})
+// app.get('/db', async (req, res) => {
+//   try {
+//     const client = await pool.connect();
+//     const result = await client.query('SELECT * FROM test_table');
+//     const results = { 'results': (result) ? result.rows : null};
+//     res.render('pages/db', results );
+//     client.release();
+//   } catch (err) {
+//     console.error(err);
+//     res.send("Error " + err);
+//   }
+// })
 
 // Halaman form Create Article
 app.get('/articles/create', (req, res) => {
