@@ -16,6 +16,8 @@
   "production": {
     "use_env_variable": "DATABASE_URL",
     "database": "d605qfmrvmfmpj",
+    "username": "hapguufwpqrzzv",
+    "password": "f025cb2d683bad8c0cc0a272f36efcd8609b3b1daf852a338bb400fb775a66ab",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
